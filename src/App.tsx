@@ -1,9 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
-
-import { Container } from "semantic-ui-react";
-
-import User from "./pages/User";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import Routes from "./routes";
 import "./global.css";
