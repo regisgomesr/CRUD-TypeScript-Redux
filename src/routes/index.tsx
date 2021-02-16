@@ -1,14 +1,16 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import React from 'react';
+import { Provider } from 'react-redux';
+import { Route } from 'react-router-dom';
 
-import Users from "../pages/Users";
-import CreateUser from "../pages/CreateUser";
+import UserList from '../components/UserList';
+// import CreateUser from "../pages/CreateUser";
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route path="/" exact component={Users} />
-    <Route path="/create-user" component={CreateUser} />
-  </Switch>
+import store from '../store';
+
+const Routes = () => (
+  <Provider store={store}>
+    <Route path="/" exact component={UserList} />
+  </Provider>
 );
 
 export default Routes;
